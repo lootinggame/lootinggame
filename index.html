@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looting Game - Catálogo Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos para que todas las tarjetas sean idénticas, con tamaño fijo y animación */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background-color: #1a1625;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #2d2640;
+            width: 320px;
+            height: 420px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 10px 25px rgba(123, 68, 255, 0.25);
+            border-color: #7b44ff;
+        }
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+        .product-info {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            background-color: #1a1625;
+        }
+        .product-info .category {
+            font-size: 11px;
+            font-weight: bold;
+            color: #b088ff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        .product-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .price-box {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+        .btn-whatsapp {
+            background-color: #7b44ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #6832eb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Estilo Moderno -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="logo.png" alt="Looting Game Logo" class="logo-img">
+            </a>
+        </div>
+<form action="buscar.html" method="GET" class="search-bar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" name="q" id="searchInput" placeholder="Buscar juegos, gift cards, PS Plus...">
+</form>
+        </div>
+
+
+        <div class="whatsapp-header">
+            <a href="https://wa.me/5491132648737?text=Hola,%20vengo%20de%20la%20web%20de%20Looting%20Game%20y%20quiero%20más%20información" target="_blank" class="btn-wa-header">
+                <i class="fa-brands fa-whatsapp"></i> Soporte
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav-menu">
+        <a href="index.html">Inicio</a>
+        <a href="preventas.html">Preventas/Estrenos</a>
+        <a href="playstationplus.html">PlayStation Plus</a>
+        <a href="giftcards.html">Gift Cards</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <!-- Contenido Principal -->
+    <main class="container">
+        <div class="banner-section">
+            <h2>¿Buscás tu próximo juego?</h2>
+            <p>Acá podés encontrar juegos de PS4, PS5 y membresías de PlayStation Plus. Elegí lo que querés y escribinos por WhatsApp.</p>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Tarjeta 1 -->
+            <div class="product-card" data-name="Alan Wake 2 Deluxe Edition">
+                <img src="https://store-images.s-microsoft.com/image/apps.392.13730682538867161.8f537728-6189-4c1e-9f31-1a3e98e55783.30ef89f1-1e3f-48c0-9fbe-dd12d4758712?q=90&w=480&h=270" alt="Alan Wake 2 Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Alan Wake 2 Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$23.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Alan%20Wake%202%20Deluxe%20Edition%20($23.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="product-card" data-name="Alone In The Dark">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1310410/capsule_616x353.jpg?t=1754066311" alt="Alone In The Dark">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Alone In The Dark</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Alone%20in%20the%20dark%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="product-card" data-name="Assassin's Creed Black Flag Resynced Deluxe Edition">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202603/1215/5f6f9949966716f0f2185bb60c2eeec67335135a838cdc89.jpg" alt="Assassin's Creed Black Flag Resynced Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Assassin's Creed Black Flag Resynced Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$74.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Black%20Flag%20Resynced%20Deluxe%20Edition%20($74.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="product-card" data-name="Assassin's Creed Black Flag Resynced">
+                <img src="https://juegosdigitaleselsalvador.com/files/images/noticias/1780521837_1.webp" alt="Assassin's Creed Black Flag Resynced">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Assassin's Creed Black Flag Resynced</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$68.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Black%20Flag%20Resynced%20($68.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="product-card" data-name="Assassin's Creed Rogue Remastered">
+                <img src="https://i0.wp.com/bgamer.pro/wp-content/uploads/2018/03/1.jpg?resize=750%2C422" alt="Assassin's Creed Rogue Remastered">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Rogue Remastered</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Rogue%20Remastered%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="product-card" data-name="Assassin's Creed Triple Pack: Black Flag, Unity, Syndicate">
+                <img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/assassin-s-creed-triple-pack-file-ee3d9b23.jpg.webp" alt="Assassin's Creed Triple Pack">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Triple Pack: Black Flag, Unity, Syndicate</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Triple%20Pack%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 7 -->
+            <div class="product-card" data-name="Assassin's Creed III Remastered">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000010684/e3067db27e695b489f16de14d650c1c487dcf54bc9bfbbea2510f7acc9a2d57e" alt="Assassin's Creed III Remastered">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed III Remastered</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20III%20Remastered%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 8 -->
+            <div class="product-card" data-name="Assassin's Creed Odyssey - Ultimate Edition Español">
+                <img src="https://www.erysta.com/_next/image?url=https%3A%2F%2Ferysta-cdn.com%2Fmedias%2Fassassin-s-creed-odyssey-ultimate-edition-xbox-one-xbox-series-x-s-ultimate-edition-xbox-one-xbox-series-x-s-game-microsoft-store-cover.webp&w=640&q=70" alt="Assassin's Creed Odyssey - Ultimate Edition Español">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Odyssey - Ultimate Edition Español</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Odyssey%20Ultimate%20Español%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 9 -->
+            <div class="product-card" data-name="Assassin's Creed Odyssey - Ultimate Edition Ingles">
+                <img src="https://www.erysta.com/_next/image?url=https%3A%2F%2Ferysta-cdn.com%2Fmedias%2Fassassin-s-creed-odyssey-ultimate-edition-xbox-one-xbox-series-x-s-ultimate-edition-xbox-one-xbox-series-x-s-game-microsoft-store-cover.webp&w=640&q=70" alt="Assassin's Creed Odyssey - Ultimate Edition Ingles">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Odyssey - Ultimate Edition Ingles</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Odyssey%20Ultimate%20Ingles%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 10 -->
+            <div class="product-card" data-name="Assassin's Creed Odyssey Español">
+                <img src="https://img.asmedia.epimg.net/resizer/v2/K4YGZCSULNJBDL7R7CP6QUZOKY.jpg?auth=dde3a76e5915ac3539955089a5c21af6a96a7755834564afb3c53400e88718db&width=1472&height=828&smart=true" alt="Assassin's Creed Odyssey Español">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Odyssey Español</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Odyssey%20Español%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 11 -->
+            <div class="product-card" data-name="Assassin's Creed Origins - Gold Edition">
+                <img src="https://images.g2a.com/470x276/1x1x0/assassins-creed-origins-gold-edition-pc-green-gift-key-global-i10000068314035/6f9e4ec1d4af42f2a1c276b2" alt="Assassin's Creed Origins - Gold Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Origins - Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$6.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Origins%20Gold%20($6.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 12 -->
+            <div class="product-card" data-name="Assassin's Creed Unity">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289650/capsule_616x353.jpg?t=1786632648" alt="Assassin's Creed Unity">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Unity</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$12.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Unity%20($12.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 13 -->
+            <div class="product-card" data-name="Assassin's Creed Mirage Español">
+                <img src="https://depor.com/resizer/v2/B2ALML74VVFRFOXZADAF65ZV24.jpg?auth=21853d25b65c775d9e94865a21272149c829a7582f2188cd462b7630c352c6bb&width=3840&height=2160&quality=90&smart=true" alt="Assassin's Creed Mirage Español">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Mirage Español</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$21.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Mirage%20Español%20($21.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 14 -->
+            <div class="product-card" data-name="Assassin's Creed Mirage - Master Assassin Edition">
+                <img src="https://cdn2.unrealengine.com/egst-storelandscape-2560x1440-2560x1440-705261cf8cdf.jpg" alt="Assassin's Creed Mirage - Master Assassin Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Mirage - Master Assassin Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$36.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassin's%20Creed%20Mirage%20Master%20Edition%20($36.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 15 -->
+            <div class="product-card" data-name="Assassin's Creed Valhalla">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202102/0918/uBH0sLozTQfgL9CcuLcKK2oR.jpg" alt="Assassin's Creed Valhalla">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Assassin's Creed Valhalla</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$52.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Assassins%20Creed%20Valhalla%20($52.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 16 -->
+            <div class="product-card" data-name="Batman™: Arkham Knight">
+                <img src="https://i.ytimg.com/vi/lzr1PuYfWVg/maxresdefault.jpg">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Batman™: Arkham Knight</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Batman%20Arkham%20Knight%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 17 -->
+            <div class="product-card" data-name="Battlefield 4™">
+                <img src="https://cdn1.epicgames.com/spt-assets/8141dd49fe39421989a02983a3bbdb00/battlefield-4-eme4o.jpg" alt="Battlefield 4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Battlefield 4™</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Battlefield%204%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 18 -->
+            <div class="product-card" data-name="Battlefield™ 1">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/0612/B4pRK104PVoGPCh1zkb0gRTa.jpg" alt="Battlefield 1">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Battlefield™ 1</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Battlefield%201%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 19 -->
+            <div class="product-card" data-name="Battlefield™ V">
+                <img src="https://img.youtube.com/vi/a7ZpQadiyqs/maxresdefault.jpg" alt="Battlefield V">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Battlefield™ V</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Battlefield%20V%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 20 -->
+            <div class="product-card" data-name="Bayonetta">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000001107/fc38578b345af43fbc7bd1eb5be84594ab6c28bd8927ce8fca97e08071f2705d" alt="Bayonetta">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Bayonetta</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Bayonetta%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 21 -->
+            <div class="product-card" data-name="Bloodborne™: Game of the Year Edition">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202011/2320/FncUSvu0fjmUeBcagIiuXOiD.jpg" alt="Bloodborne GOTY">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Bloodborne™: Game of the Year Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Bloodborne%20GOTY%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 22 -->
+            <div class="product-card" data-name="Bully (Canis Canem Edit)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSESqRIRbDd6E-nzDZAcBezMhmlSiE3So27gDZHFWN4HMGatBxSCqKVT5Q&s=10" alt="Bully">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Bully (Canis Canem Edit)</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$17.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Bully%20($17.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 23 -->
+            <div class="product-card" data-name="Call of Duty®: Advanced Warfare Gold Edition">
+                <img src="https://images.g2a.com/470x276/1x1x0/call-of-duty-advanced-warfare-gold-edition-pc-steam-account-global-i10000001537012/3d94d5d5c1e54fa49f906236" alt="COD Advanced Warfare">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: Advanced Warfare Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$23.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Advanced%20Warfare%20Gold%20($23.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 24 -->
+            <div class="product-card" data-name="Call of Duty®: Black Ops III - Zombies Chronicles Deluxe ESPAÑOL">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/311210/capsule_616x353.jpg?t=1780963650" alt="COD Black Ops III Zombies Deluxe">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: Black Ops III - Zombies Chronicles Deluxe ESPAÑOL</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$47.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Black%20Ops%20III%20Zombies%20Deluxe%20($47.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 25 -->
+            <div class="product-card" data-name="Call of Duty®: Ghosts Gold Edition">
+                <img src="https://gaming-cdn.com/images/products/7691/orig/call-of-duty-ghosts-gold-edition-pc-steam-cover.jpg?v=1787585834" alt="COD Ghosts Gold">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: Ghosts Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$23.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Ghosts%20Gold%20($23.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 26 -->
+            <div class="product-card" data-name="Call of Duty®: Infinite Warfare - Legacy Edition ESPAÑOL">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSQ73HHD20fhJjLd5tm1AuMpJdpt6IYXhMTwIo_mNjK_lF-Hetb4uNQXs&s=10" alt="COD Infinite Warfare Legacy">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: Infinite Warfare - Legacy Edition ESPAÑOL</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$43.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Infinite%20Warfare%20Legacy%20($43.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 27 -->
+            <div class="product-card" data-name="Call of Duty®: Modern Warfare® 2 Campaign Remastered">
+                <img src="https://gaming-cdn.com/images/products/2494/616x353/call-of-duty-modern-warfare-2-campaign-remastered-pc-juego-battle-net-cover.jpg?v=1701334132" alt="COD MW2 Campaign Remastered">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: Modern Warfare® 2 Campaign Remastered</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$7.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20MW2%20Campaign%20Remastered%20($7.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 28 -->
+            <div class="product-card" data-name="Call of Duty®: Vanguard PS5 ESPAÑOL ESPAÑA">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_932212-MLU69591013787_052023-O.webp" alt="COD Vanguard PS5 España">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Call of Duty®: Vanguard PS5 ESPAÑOL ESPAÑA</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$11.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Vanguard%20PS5%20España%20($11.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 29 -->
+            <div class="product-card" data-name="Call of Duty®: Vanguard PS5 ESPAÑOL LATINO">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202108/2019/q6FXYXGHoSfukjXuQ86qCcxz.jpg" alt="COD Vanguard PS5 Latino">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Call of Duty®: Vanguard PS5 ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20Vanguard%20PS5%20Latino%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 30 -->
+            <div class="product-card" data-name="Call of Duty®: WWII - Edición Digital Deluxe ESPAÑOL LATINO">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/745/312/products/call-of-duty-wwii-digital-deluxe-digital-deluxe-pc-juego-steam-cover-6c6cfdd55419cac33a17191578684822-1024-1024.webp" alt="Call of Duty WWII Digital Deluxe">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Call of Duty®: WWII - Edición Digital Deluxe ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$47.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Call%20of%20Duty%20WWII%20Edicion%20Digital%20Deluxe%20Espanol%20Latino%20($47.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 31 -->
+            <div class="product-card" data-name="Captain Tsubasa: Rise of New Champions – Deluxe Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1163550/capsule_616x353.jpg?t=1718965999" alt="Captain Tsubasa Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Captain Tsubasa: Rise of New Champions – Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Captain%20Tsubasa%20Rise%20of%20New%20Champions%20Deluxe%20Edition%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 32 -->
+            <div class="product-card" data-name="Crash Bandicoot™ Bundle - N. Sane Trilogy + CTR Nitro-Fueled">
+                <img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/crash-bandicoot-bundle-n-sane-tr-c95569eb-file-c95569dc.jpg.webp" alt="Crash Bandicoot Bundle N Sane Trilogy + CTR">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Crash Bandicoot™ Bundle - N. Sane Trilogy + CTR Nitro-Fueled</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Crash%20Bandicoot%20Bundle%20N%20Sane%20Trilogy%20plus%20CTR%20Nitro-Fueled%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 33 -->
+            <div class="product-card" data-name="Crash™ + Spyro™ Triple Play Bundle">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_502/b_white/f_auto/q_auto/store/software/switch/70070000019680/88c00920ce0d407bce23264b5b14081e2514cd2d15a9cea841b181b921185c31.jpg" alt="Crash + Spyro Triple Play Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Crash™ + Spyro™ Triple Play Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Crash%20plus%20Spyro%20Triple%20Play%20Bundle%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 34 -->
+            <div class="product-card" data-name="Crash™ Team Racing Nitro-Fueled + Spyro™ Game Bundle">
+                <img src="https://images.g2a.com/470x276/1x1x0/crash-team-racing-nitro-fueled-spyro-game-bundle-ps4-psn-account-global-i10000504317002/6e62d68bb20e4edb9735fe44" alt="Crash Team Racing + Spyro Game Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Crash™ Team Racing Nitro-Fueled + Spyro™ Game Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Crash%20Team%20Racing%20Nitro-Fueled%20plus%20Spyro%20Game%20Bundle%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 35 -->
+            <div class="product-card" data-name="Dead Island - Series Bundle">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202604/0715/13178a38faa08dac73add197e9e1f80f74d69b00a8515ec5.jpg" alt="Dead Island Series Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Dead Island - Series Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$20.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Dead%20Island%20Series%20Bundle%20($20.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 36 -->
+            <div class="product-card" data-name="Dead Island Definitive Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/383150/capsule_616x353.jpg?t=1725361899" alt="Dead Island Definitive Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Dead Island Definitive Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$6.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Dead%20Island%20Definitive%20Edition%20($6.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 37 -->
+            <div class="product-card" data-name="Dead Island: Riptide Definitive Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/383180/capsule_616x353.jpg?t=1725362483" alt="Dead Island Riptide Definitive Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Dead Island: Riptide Definitive Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$6.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Dead%20Island%20Riptide%20Definitive%20Edition%20($6.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 38 -->
+            <div class="product-card" data-name="Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Deluxe Edition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1P3zLsW4uvwNwsPtP6LOyvGMU5Nhu090wYezRw2MmqMQ8hdCGPba1-I&s=10" alt="Demon Slayer The Hinokami Chronicles 2 Deluxe">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2 Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Demon%20Slayer%20Kimetsu%20no%20Yaiba%20The%20Hinokami%20Chronicles%202%20Deluxe%20Edition%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 39 -->
+            <div class="product-card" data-name="Diablo® IV - Standard Edition">
+                <img src="https://store-images.s-microsoft.com/image/apps.22440.14058691289303304.7aeef6ea-ac74-41c2-a37d-5c5c1e0eb55d.b01da211-c1ee-49b2-a53c-9a4cdc0b01a0?q=90&w=480&h=270" alt="Diablo IV Standard Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Diablo® IV - Standard Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Diablo%20IV%20Standard%20Edition%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 40 -->
+            <div class="product-card" data-name="DOOM Eternal Standard Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/782330/3efb12f884eaee39b4853721f5cf1c6e2b706495/capsule_616x353.jpg?t=1783432602" alt="DOOM Eternal Standard Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>DOOM Eternal Standard Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20DOOM%20Eternal%20Standard%20Edition%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 41 -->
+            <div class="product-card" data-name="DRAGON BALL FighterZ - Legendary Edition">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70070000020923/42b41cf30b7e8b49822bedf59dfa8509ad7e0e87b1015cee3f7ef65d28241a64" alt="DRAGON BALL FighterZ Legendary Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>DRAGON BALL FighterZ - Legendary Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$37.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20DRAGON%20BALL%20FighterZ%20Legendary%20Edition%20($37.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 42 -->
+            <div class="product-card" data-name="Dragon Ball Xenoverse 1 and 2 Bundle">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIzH5phGA1CtJcIbwV9jZDwgig0aEzPVk9QjYgLDX6LlSaABxFylzdV7s&s=10" alt="Dragon Ball Xenoverse 1 and 2 Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Dragon Ball Xenoverse 1 and 2 Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Dragon%20Ball%20Xenoverse%201%20and%202%20Bundle%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 43 -->
+            <div class="product-card" data-name="Dragon Ball Xenoverse">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/323470/capsule_616x353.jpg?t=1701323766" alt="Dragon Ball Xenoverse">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Dragon Ball Xenoverse</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Dragon%20Ball%20Xenoverse%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 44 -->
+            <div class="product-card" data-name="DRAGON BALL Z: KAKAROT DAIMA EDITION">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202507/0922/d198179a0c5700e7fb14ac94d5f7c4ede8f66acb49b040a8.jpg" alt="DRAGON BALL Z KAKAROT DAIMA EDITION">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>DRAGON BALL Z: KAKAROT DAIMA EDITION</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20DRAGON%20BALL%20Z%20KAKAROT%20DAIMA%20EDITION%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 45 -->
+            <div class="product-card" data-name="DRAGON BALL: Sparking! ZERO - Edición Super Limit-Breaking NEO PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0JJytaTGlKvkYRgrB9KLf3Rm9o095qQNQnwXJrq9EFcOcc1PzXhAwrAs&s=10">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>DRAGON BALL: Sparking! ZERO - Edición Super Limit-Breaking NEO PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$74.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20DRAGON%20BALL%20Sparking%20ZERO%20Edicion%20Super%20Limit-Breaking%20NEO%20PS5%20($74.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 46 -->
+            <div class="product-card" data-name="EA Family Bundle">
+                <img src="https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/ea-family-bundle-file-ed7af190.jpg.webp" alt="EA Family Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>EA Family Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20EA%20Family%20Bundle%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 47 -->
+            <div class="product-card" data-name="Far Cry 4 - Gold Edition">
+                <img src="https://images.g2a.com/470x276/1x1x0/far-cry-4-gold-edition-pc-ubisoft-connect-account-global-i10000001281039/9b9468c55ad64d62bc2ac92a" alt="Far Cry 4 Gold Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry 4 - Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$16.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%204%20Gold%20Edition%20($16.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 48 -->
+            <div class="product-card" data-name="FAR CRY 5">
+                <img src="https://i.blogs.es/bcd8b9/260318-farcry5-review/1366_2000.jpg" alt="FAR CRY 5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>FAR CRY 5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$14.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20FAR%20CRY%205%20($14.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 49 -->
+            <div class="product-card" data-name="Far Cry New Dawn">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/939960/capsule_616x353.jpg?t=1750925197" alt="Far Cry New Dawn">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry New Dawn</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%20New%20Dawn%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 50 -->
+            <div class="product-card" data-name="Far Cry New Dawn Deluxe Edition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIW-K0SA5o4CDk19eevzNN2CfgQj8906w1CITfeiWni0N0QEjpSjYtcGTm&s=10" alt="Far Cry New Dawn Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry New Dawn Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%20New%20Dawn%20Deluxe%20Edition%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 51 -->
+            <div class="product-card" data-name="Far Cry®3 Classic Edition">
+                <img src="https://i0.wp.com/nodegamers.com/wp-content/uploads/2022/05/far-cry-3-classic_1.jpg?resize=750%2C422&ssl=1" alt="Far Cry 3 Classic Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry®3 Classic Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$12.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%203%20Classic%20Edition%20($12.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 52 -->
+            <div class="product-card" data-name="Far Cry® 4">
+                <img src="https://preview.redd.it/in-far-cry-4-there-is-an-easter-egg-where-if-you-wait-for-v0-tpw2wd3jn1pz.png?width=1080&crop=smart&auto=webp&s=2dcc89ec4ca83acd6eb43a582c4e58c70f807d13" alt="Far Cry 4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry® 4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%204%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 53 -->
+            <div class="product-card" data-name="Far Cry® 5 Gold Edition">
+                <img src="https://cdn2.unrealengine.com/Diesel/productv2/far-cry-5/gold-edition/GLD_Image_Hero_Carrousel-1920x1080-e640f6f18caff2a624776dc93110aef701c74308.jpg" alt="Far Cry 5 Gold Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry® 5 Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$20.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%205%20Gold%20Edition%20($20.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 54 -->
+            <div class="product-card" data-name="Far Cry® 6 Game of the Year Edition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsV-CaXbls9PotGbgAMQvc4lOwc5M4R6JJWdS34YFje9fijdSzzj8Pvr8&s=10" alt="Far Cry 6 Game of the Year Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Far Cry® 6 Game of the Year Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Far%20Cry%206%20Game%20of%20the%20Year%20Edition%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 55 -->
+            <div class="product-card" data-name="Gang Beasts">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000033942/04e13ca17a27aad6c8fe171aca4bcd9731cf04121542958fa4d09d2b49c4c154" alt="Gang Beasts">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Gang Beasts</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Gang%20Beasts%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 56 -->
+            <div class="product-card" data-name="Gran Turismo® 7 PS4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJBmiDCsx8GMLDku1KQ8JN-fEoELt2ued5gg93bQ6BahnBhr3FlzPqzF4&s=10" alt="Gran Turismo 7 PS4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4</span>
+                        <h3>Gran Turismo® 7 PS4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$26.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Gran%20Turismo%207%20PS4%20($26.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 57 -->
+            <div class="product-card" data-name="Gran Turismo® 7 PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmBa2sjmoFHP-yhhHAWcXRvuCb7XTjTuKmxlxnBXeDwDdKDKH-1xZKCE&s=10" alt="Gran Turismo 7 PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Gran Turismo® 7 PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Gran%20Turismo%207%20PS5%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 58 -->
+            <div class="product-card" data-name="Hades">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000033131/dbc8c55a21688b446a5c57711b726956483a14ef8c5ddb861f897c0595ccb6b5" alt="Hades">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Hades</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$12.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Hades%20($12.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 59 -->
+            <div class="product-card" data-name="Hades II PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyu2ndu6bstpfEx7P-ZSWGRbHGqsNMWscbMFOjQ3CV9T-SPoc-15z8vVA&s=10" alt="Hades II PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Hades II PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$29.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Hades%20II%20PS5%20($29.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= NUEVA TANDA DE JUEGOS AGREGADOS ================= -->
+
+            <!-- HITMAN World of Assassination Part One -->
+            <div class="product-card" data-name="HITMAN World of Assassination Part One">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1659040/capsule_616x353.jpg" alt="HITMAN World of Assassination Part One">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>HITMAN World of Assassination Part One</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20HITMAN%20World%20of%20Assassination%20Part%20One%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invincible VS PS5 -->
+            <div class="product-card" data-name="Invincible VS PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS39VMgHAolZkKxcFDn8NxT2ilLAbHwwPkQ-LT2_HhbaCvanUK3amCmsMI&s=10" alt="Invincible VS PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Invincible VS PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Invincible%20VS%20PS5%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Judgment PS4 -->
+            <div class="product-card" data-name="Judgment PS4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEqA2uKDPl1eEgpOXlrB4_slwoN__fs-kUMO3LxTV-etBo9mPDZPIY_WO&s=10" alt="Judgment PS4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4</span>
+                        <h3>Judgment PS4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$12.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Judgment%20PS4%20($12.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Judgment PS5 -->
+            <div class="product-card" data-name="Judgment PS5">
+                <img src="https://acdn-us.mitiendanube.com/stores/001/482/801/products/juegos-baratos-ps5-c4026b3d2fd7c089c217249925050980-1024-1024.webp" alt="Judgment PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Judgment PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Judgment%20PS5%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Just Cause 3: XXL Edition -->
+            <div class="product-card" data-name="Just Cause 3: XXL Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/225540/capsule_616x353.jpg" alt="Just Cause 3: XXL Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Just Cause 3: XXL Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$5.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Just%20Cause%203%20XXL%20Edition%20($5.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO® CITY Undercover -->
+            <div class="product-card" data-name="LEGO® CITY Undercover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSCnj9oPRVYrAh9OECKRdZUXaM-zUUFA0Frv0Msqb8yD2jgdyPCPV5M8Bc&s=10" alt="LEGO® CITY Undercover">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>LEGO® CITY Undercover</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20LEGO%20CITY%20Undercover%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO® Marvel Super Heroes 2 Deluxe Edition -->
+            <div class="product-card" data-name="LEGO® Marvel Super Heroes 2 Deluxe Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/647830/capsule_616x353.jpg" alt="LEGO® Marvel Super Heroes 2 Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>LEGO® Marvel Super Heroes 2 Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$11.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20LEGO%20Marvel%20Super%20Heroes%202%20Deluxe%20Edition%20($11.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO® Marvel’s Avengers Deluxe Edition -->
+            <div class="product-card" data-name="LEGO® Marvel’s Avengers Deluxe Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/405310/capsule_616x353.jpg" alt="LEGO® Marvel’s Avengers Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>LEGO® Marvel’s Avengers Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20LEGO%20Marvels%20Avengers%20Deluxe%20Edition%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO® Star Wars™: The Force Awakens Standard Edition -->
+            <div class="product-card" data-name="LEGO® Star Wars™: The Force Awakens Standard Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/438640/capsule_616x353.jpg" alt="LEGO® Star Wars™: The Force Awakens Standard Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>LEGO® Star Wars™: The Force Awakens Standard Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20LEGO%20Star%20Wars%20The%20Force%20Awakens%20Standard%20Edition%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO® The Hobbit -->
+            <div class="product-card" data-name="LEGO® The Hobbit">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/285160/capsule_616x353.jpg" alt="LEGO® The Hobbit">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>LEGO® The Hobbit</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20LEGO%20The%20Hobbit%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Little Nightmares I & II Bundle -->
+            <div class="product-card" data-name="Little Nightmares I & II Bundle">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70070000014574/bbd1bf7be1b6933b83e027931f85a5fbef414df057b99737c3f457119adc111d" alt="Little Nightmares I & II Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Little Nightmares I & II Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$21.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Little%20Nightmares%20I%20and%20II%20Bundle%20($21.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mad Max -->
+            <div class="product-card" data-name="Mad Max">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/234140/capsule_616x353.jpg" alt="Mad Max">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Mad Max</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Mad%20Max%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MADiSON PS4 -->
+            <div class="product-card" data-name="MADiSON PS4">
+                <img src="https://i.ytimg.com/vi/IQlmKDECXp8/maxresdefault.jpg" alt="MADiSON PS4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4</span>
+                        <h3>MADiSON PS4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$29.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20MADiSON%20PS4%20($29.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MADiSON PS5 -->
+            <div class="product-card" data-name="MADiSON PS5">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1670870/capsule_616x353.jpg?t=1686276552" alt="MADiSON PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>MADiSON PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$29.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20MADiSON%20PS5%20($29.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mafia: The Old Country Definitive Edition PS5 -->
+            <div class="product-card" data-name="Mafia: The Old Country Definitive Edition PS5">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202504/2416/044c29ea5623bbb31fc1b2db8577621ba7f035b4c679cfdc.jpg" alt="Mafia: The Old Country Definitive Edition PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Mafia: The Old Country Definitive Edition PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$50.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Mafia%20The%20Old%20Country%20Definitive%20Edition%20PS5%20($50.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marvel's Spider-Man: Miles Morales ESPAÑOL LATINO -->
+            <div class="product-card" data-name="Marvel's Spider-Man: Miles Morales ESPAÑOL LATINO">
+                <img src="https://i.ytimg.com/vi/iGKbbjUnjV4/maxresdefault.jpg" alt="Marvel's Spider-Man: Miles Morales ESPAÑOL LATINO">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Marvel's Spider-Man: Miles Morales ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$26.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Marvels%20Spider-Man%20Miles%20Morales%20Espanol%20Latino%20($26.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marvel’s Spider-Man 2 PS5 ESPAÑOL LATINO -->
+            <div class="product-card" data-name="Marvel’s Spider-Man 2 PS5 ESPAÑOL LATINO">
+                <img src="https://i.ytimg.com/vi/EbXqSkVKLfE/maxresdefault.jpg" alt="Marvel’s Spider-Man 2 PS5 ESPAÑOL LATINO">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Marvel’s Spider-Man 2 PS5 ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Marvels%20Spider-Man%202%20PS5%20Espanol%20Latino%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Matchpoint - Tennis Championships -->
+            <div class="product-card" data-name="Matchpoint - Tennis Championships">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1345760/capsule_616x353.jpg?t=1768229725" alt="Matchpoint - Tennis Championships">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Matchpoint - Tennis Championships</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$26.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Matchpoint%20Tennis%20Championships%20($26.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle-earth™: Shadow Bundle -->
+            <div class="product-card" data-name="Middle-earth™: Shadow Bundle">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch2/70010000134057/3b1cfa9c8973ff049355fa1a62408eac1e0dd94a2723d7080b5f6efadb0f0f17" alt="Middle-earth™: Shadow Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Middle-earth™: Shadow Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$11.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Middle-earth%20Shadow%20Bundle%20($11.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Need for Speed™ Ultimate Bundle -->
+            <div class="product-card" data-name="Need for Speed™ Ultimate Bundle">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScBsMUKWscZrHHlZ-N3l-9HG6WNOOrEXDg4z68ODZTktFS9DiiSPsrzQuF&s=10" alt="Need for Speed™ Ultimate Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Need for Speed™ Ultimate Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Need%20for%20Speed%20Ultimate%20Bundle%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition -->
+            <div class="product-card" data-name="ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1089090/capsule_616x353.jpg" alt="ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>ONE PIECE: PIRATE WARRIORS 4 Ultimate Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20ONE%20PIECE%20PIRATE%20WARRIORS%204%20Ultimate%20Edition%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Poppy Playtime: Capítulo 5 PS4 / PS5 -->
+            <div class="product-card" data-name="Poppy Playtime: Capítulo 5">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4100940/d4f4792907508dd65da0df821257e1e06740d44e/capsule_616x353.jpg?t=1789515206" alt="Poppy Playtime: Capítulo 5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Poppy Playtime: Capítulo 5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$24.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Poppy%20Playtime%20Capitulo%205%20($24.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+       
+            <!-- Poppy Playtime: Chapter 2 PS4 / PS5 -->
+            <div class="product-card" data-name="Poppy Playtime: Chapter 2">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1817490/a188e395ba419de1e25b458febddc3fc4852a343/capsule_616x353.jpg?t=1789515302" alt="Poppy Playtime: Chapter 2">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Poppy Playtime: Chapter 2</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Poppy%20Playtime%20Chapter%202%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Poppy Playtime: Chapter 3 PS4 / PS5 -->
+            <div class="product-card" data-name="Poppy Playtime: Chapter 3">
+                <img src="https://cellplay.com.ar/img/Public/1081/6282-producto-capsule-616x353.jpg" alt="Poppy Playtime: Chapter 3">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Poppy Playtime: Chapter 3 PS4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$14.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Poppy%20Playtime%20Chapter%203%20($14.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Poppy Playtime: Chapter 4 PS4 / PS5 -->
+            <div class="product-card" data-name="Poppy Playtime: Chapter 4">
+                <img src="https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/poppyplaytimechapter4/2x1_PoppyPlaytimeChapter4_image1600w.jpg" alt="Poppy Playtime: Chapter 4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Poppy Playtime: Chapter 4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Poppy%20Playtime%20Chapter%204%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Prince of Persia™ - New Era Bundle -->
+            <div class="product-card" data-name="Prince of Persia™ - New Era Bundle">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGvADSjUFaLWYv_WoP_eM9GokhWnd05t9b1phW5fN_LM4Bu9CJdP-DAhM&s=10" alt="Prince of Persia™ - New Era Bundle">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Prince of Persia™ - New Era Bundle</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$23.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Prince%20of%20Persia%20New%20Era%20Bundle%20($23.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ratchet & Clank: Rift Apart Digital Deluxe Edition PS5 -->
+            <div class="product-card" data-name="Ratchet & Clank: Rift Apart Digital Deluxe Edition PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM0eZ-73ulnzzrEwn9leLVbidXf436tkDG-IPd7ls5NBwAwUuU8PG1liw&s=10" alt="Ratchet & Clank: Rift Apart Digital Deluxe Edition PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Ratchet & Clank: Rift Apart Digital Deluxe Edition PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$20.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Ratchet%20and%20Clank%20Rift%20Apart%20Digital%20Deluxe%20Edition%20PS5%20($20.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ratchet & Clank™ -->
+            <div class="product-card" data-name="Ratchet & Clank™">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI2l7BYpaiqkUH5WQpDiOWW_5QDUApnbtNgOr06nWyuFvga8X6fJkqpG8&s=10" alt="Ratchet & Clank™">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Ratchet & Clank™</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Ratchet%20and%20Clank%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sackboy: A Big Adventure Digital Deluxe Edition -->
+            <div class="product-card" data-name="Sackboy: A Big Adventure Digital Deluxe Edition">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUf7-fYFA3gj4UqOPdYANnnEt7SoUOtHRRfKT-NTj9xaZGBZ8uopmvOdM&s=10" alt="Sackboy: A Big Adventure Digital Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Sackboy: A Big Adventure Digital Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Sackboy%20A%20Big%20Adventure%20Digital%20Deluxe%20Edition%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sleeping Dogs™ Definitive Edition -->
+            <div class="product-card" data-name="Sleeping Dogs™ Definitive Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/307690/capsule_616x353.jpg" alt="Sleeping Dogs™ Definitive Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Sleeping Dogs™ Definitive Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Sleeping%20Dogs%20Definitive%20Edition%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slime Rancher -->
+            <div class="product-card" data-name="Slime Rancher">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/433340/capsule_616x353.jpg" alt="Slime Rancher">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Slime Rancher</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Slime%20Rancher%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slime Rancher 2 PS5 -->
+            <div class="product-card" data-name="Slime Rancher 2 PS5">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1657630/capsule_616x353.jpg" alt="Slime Rancher 2 PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Slime Rancher 2 PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Slime%20Rancher%202%20PS5%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sonic Colours: Ultimate - Digital Deluxe -->
+            <div class="product-card" data-name="Sonic Colours: Ultimate - Digital Deluxe">
+                <img src="https://target.scene7.com/is/image/Target/GUEST_97ef099f-5f4f-4763-8091-09a08eb16fd3" alt="Sonic Colours: Ultimate - Digital Deluxe">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Sonic Colours: Ultimate - Digital Deluxe</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Sonic%20Colours%20Ultimate%20Digital%20Deluxe%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sonic Origins -->
+            <div class="product-card" data-name="Sonic Origins">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/store/software/switch/70010000045649/bf9665c0d3f4f99954d8faa8f426e63a1e3cd1eec297b4f10d5954d9d188b199" alt="Sonic Origins">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Sonic Origins</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$14.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Sonic%20Origins%20($14.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SONIC SUPERSTARS -->
+            <div class="product-card" data-name="SONIC SUPERSTARS">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000069430/20a06bf1886558538728f46bf4b3bae2875e7d371d3b0d2b3bbf6ea2302f7668" alt="SONIC SUPERSTARS">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>SONIC SUPERSTARS</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$25.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20SONIC%20SUPERSTARS%20($25.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stellar Blade™ PS5 -->
+            <div class="product-card" data-name="Stellar Blade™ PS5">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202506/0212/b06dff4ff09b4bd891adb354e9ca8562d1af31c6508334ad.jpg" alt="Stellar Blade™ PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>Stellar Blade™ PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$50.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Stellar%20Blade%20PS5%20($50.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stray -->
+            <div class="product-card" data-name="Stray">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1332010/capsule_616x353.jpg" alt="Stray">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Stray</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$21.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Stray%20($21.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEKKEN 7 - Originals Edition -->
+            <div class="product-card" data-name="TEKKEN 7 - Originals Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/389730/capsule_616x353.jpg" alt="TEKKEN 7 - Originals Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>TEKKEN 7 - Originals Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$21.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20TEKKEN%207%20Originals%20Edition%20($21.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennis World Tour -->
+            <div class="product-card" data-name="Tennis World Tour">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/692030/capsule_616x353.jpg" alt="Tennis World Tour">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tennis World Tour</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tennis%20World%20Tour%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tennis World Tour - Roland-Garros Edition -->
+            <div class="product-card" data-name="Tennis World Tour - Roland-Garros Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/bundles/10542/qf58uo9m6wg59xys/header_ratio.jpg?t=1558450700" alt="Tennis World Tour - Roland-Garros Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tennis World Tour - Roland-Garros Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$12.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tennis%20World%20Tour%20Roland-Garros%20Edition%20($12.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Elder Scrolls IV: Oblivion Remastered PS5 -->
+            <div class="product-card" data-name="The Elder Scrolls IV: Oblivion Remastered PS5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuArmcgBADrOTJNKB9SAWFueVAAek3z6099ro4uAU3YnghpWuVRWuAcBnF&s=10" alt="The Elder Scrolls IV: Oblivion Remastered PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>The Elder Scrolls IV: Oblivion Remastered PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$44.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Elder%20Scrolls%20IV%20Oblivion%20Remastered%20PS5%20($44.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Elder Scrolls V: Skyrim Special Edition -->
+            <div class="product-card" data-name="The Elder Scrolls V: Skyrim Special Edition">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/489830/capsule_616x353.jpg" alt="The Elder Scrolls V: Skyrim Special Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>The Elder Scrolls V: Skyrim Special Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$15.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Elder%20Scrolls%20V%20Skyrim%20Special%20Edition%20($15.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Evil Within 2 ESPAÑOL LATINO -->
+            <div class="product-card" data-name="The Evil Within 2 ESPAÑOL LATINO">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/601430/capsule_616x353.jpg" alt="The Evil Within 2 ESPAÑOL LATINO">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>The Evil Within 2 ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Evil%20Within%202%20Espanol%20Latino%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE FOREST -->
+            <div class="product-card" data-name="THE FOREST">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/242760/capsule_616x353.jpg" alt="THE FOREST">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>THE FOREST</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20THE%20FOREST%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Last of Us™ Part I PS5 ESPAÑOL LATINO -->
+            <div class="product-card" data-name="The Last of Us™ Part I PS5 ESPAÑOL LATINO">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0719/yOCVLjinZ17BVrZwL0z1a6HV.png" alt="The Last of Us™ Part I PS5 ESPAÑOL LATINO">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>The Last of Us™ Part I PS5 ESPAÑOL LATINO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$38.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Last%20of%20Us%20Part%20I%20PS5%20Espanol%20Latino%20($38.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Last of Us™ Part II Remastered ESPAÑOL LATINO PS5 -->
+            <div class="product-card" data-name="The Last of Us™ Part II Remastered ESPAÑOL LATINO PS5">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202311/1717/827d78b1eb9155e1383cc43bafeb4c900eb7157bf8b1a65a.jpg" alt="The Last of Us™ Part II Remastered ESPAÑOL LATINO PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>The Last of Us™ Part II Remastered ESPAÑOL LATINO PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Last%20of%20Us%20Part%20II%20Remastered%20Espanol%20Latino%20PS5%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Warriors® -->
+            <div class="product-card" data-name="The Warriors®">
+                <img src="https://image.api.playstation.com/cdn/UP1004/CUSA03515_00/dhPh3o6QhYDactKfndfqg838C9jaBDvQ.jpg" alt="The Warriors®">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>The Warriors®</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$14.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Warriors%20($14.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Witcher 3: Wild Hunt – Complete Edition SUBTITULADO -->
+            <div class="product-card" data-name="The Witcher 3: Wild Hunt – Complete Edition SUBTITULADO">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/capsule_616x353.jpg" alt="The Witcher 3: Wild Hunt – Complete Edition SUBTITULADO">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>The Witcher 3: Wild Hunt – Complete Edition SUBTITULADO</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$32.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20The%20Witcher%203%20Wild%20Hunt%20Complete%20Edition%20Subtitulado%20($32.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tom Clancy's The Division 2 -->
+            <div class="product-card" data-name="Tom Clancy's The Division 2">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2221490/capsule_616x353.jpg" alt="Tom Clancy's The Division 2">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tom Clancy's The Division 2</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$8.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tom%20Clancys%20The%20Division%202%20($8.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tony Hawk's™ Pro Skater™ 1 + 2 -->
+            <div class="product-card" data-name="Tony Hawk's™ Pro Skater™ 1 + 2">
+                <img src="https://store-images.s-microsoft.com/image/apps.50495.14615883433332316.46e18f7a-f276-4fc9-8aab-f748c51cb9f2.32f1be49-bc5e-4d92-9f8a-a1f5767d8fa6?q=90&w=480&h=270" alt="Tony Hawk's™ Pro Skater™ 1 + 2">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tony Hawk's™ Pro Skater™ 1 + 2</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$8.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tony%20Hawks%20Pro%20Skater%201%20plus%202%20($8.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tony Hawk's™ Pro Skater™ 1 - 4 -->
+            <div class="product-card" data-name="Tony Hawk's™ Pro Skater™ 1 - 4">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70070000031094/d7186b388372c28de382275bb599d71c4e82af247858e81bff08097fc5780249" alt="Tony Hawk's™ Pro Skater™ 1 - 4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tony Hawk's™ Pro Skater™ 1 - 4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$55.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tony%20Hawks%20Pro%20Skater%201%20to%204%20($55.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tony Hawk's™ Pro Skater™ 3 + 4 -->
+            <div class="product-card" data-name="Tony Hawk's™ Pro Skater™ 3 + 4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WldggBIkfeRlqP4Xe_DRuONTlbl7Qkr4EpoWd_mIhW83Zrev-Um93oYu&s=10" alt="Tony Hawk's™ Pro Skater™ 3 + 4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Tony Hawk's™ Pro Skater™ 3 + 4</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$37.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Tony%20Hawks%20Pro%20Skater%203%20plus%204%20($37.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UFC™ 6 Ultimate Edition PS5 -->
+            <div class="product-card" data-name="UFC™ 6 Ultimate Edition PS5">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202604/2216/140538dc9b7c8971cb58c5d6e191bab2ead5fb9bbbda0a92.jpg" alt="UFC™ 6 Ultimate Edition PS5">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS5</span>
+                        <h3>UFC™ 6 Ultimate Edition PS5</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$99.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20UFC%206%20Ultimate%20Edition%20PS5%20($99.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watch Dogs® 2 - Deluxe Edition -->
+            <div class="product-card" data-name="Watch Dogs® 2 - Deluxe Edition">
+                <img src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7yg7Jjeu9Z7scm5D2f8qHE/98e92fb757872107cb7ec9a5bfe697ae/574d3e3e6b54a406348b4567.jpg" alt="Watch Dogs® 2 - Deluxe Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Watch Dogs® 2 - Deluxe Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$10.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Watch%20Dogs%202%20Deluxe%20Edition%20($10.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watch Dogs®2 -->
+            <div class="product-card" data-name="Watch Dogs®2">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/447040/capsule_616x353.jpg" alt="Watch Dogs®2">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Watch Dogs®2</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Watch%20Dogs%202%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watch Dogs®2 - Gold Edition -->
+            <div class="product-card" data-name="Watch Dogs®2 - Gold Edition">
+                <img src="https://hb.imgix.net/1f9d39e3511883c1e49371b1e88fdfe4bba00714.jpg?auto=compress,format&fit=crop&h=353&w=616&s=a236b09793df52e6ce24a6cbb8d405cb" alt="Watch Dogs®2 - Gold Edition">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Watch Dogs®2 - Gold Edition</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Watch%20Dogs%202%20Gold%20Edition%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!-- WRC 10 FIA World Rally Championship -->
+            <div class="product-card" data-name="WRC 10 FIA World Rally Championship">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReMNEZcgjYaZ1l0XljKBtt6FyaLpFPefU6I4BKde34-a2VcO7gnmBu6CM&s=10" alt="WRC 10 FIA World Rally Championship PS4">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>WRC 10 FIA World Rally Championship</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$13.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20WRC%2010%20FIA%20World%20Rally%20Championship%20($13.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yakuza Kiwami -->
+            <div class="product-card" data-name="Yakuza Kiwami">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/834530/capsule_616x353.jpg" alt="Yakuza Kiwami">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Yakuza Kiwami</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Yakuza%20Kiwami%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yakuza Kiwami 2 -->
+            <div class="product-card" data-name="Yakuza Kiwami 2">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/927380/capsule_616x353.jpg" alt="Yakuza Kiwami 2">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Yakuza Kiwami 2</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$18.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Yakuza%20Kiwami%202%20($18.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Zombie Army Trilogy -->
+            <div class="product-card" data-name="Zombie Army Trilogy">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/301640/capsule_616x353.jpg" alt="Zombie Army Trilogy">
+                <div class="product-info">
+                    <div>
+                        <span class="category">PS4 / PS5</span>
+                        <h3>Zombie Army Trilogy</h3>
+                    </div>
+                    <div>
+                        <div class="price-box">
+                            <span class="new-price">$9.900</span>
+                        </div>
+                        <a href="https://wa.me/5491132648737?text=Hola,%20estoy%20interesado%20en%20comprar:%20Zombie%20Army%20Trilogy%20($9.900)" target="_blank" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- Script para el funcionamiento de la barra de búsqueda -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const productCards = document.querySelectorAll('.product-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            productCards.forEach(card => {
+                // Obtiene el nombre desde el atributo data-name o desde el texto del título (h3)
+                const productName = card.getAttribute('data-name').toLowerCase();
+                const productTitle = card.querySelector('h3').textContent.toLowerCase();
+
+                // Comprueba si coincide con el término de búsqueda
+                if (productName.includes(searchTerm) || productTitle.includes(searchTerm)) {
+                    card.style.display = 'flex'; // Muestra la tarjeta
+                } else {
+                    card.style.display = 'none'; // Oculta la tarjeta
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    <!-- Sección Medios de Pago -->
+    <section class="payment-section container">
+        <div class="payment-header-title">
+            <h2>Medios de Pago</h2>
+            <p>Acepto múltiples opciones para tu comodidad. Coordinamos todo por WhatsApp.</p>
+        </div>
+
+        <div class="payment-grid">
+            <!-- Columna Transferencia -->
+            <div class="payment-card">
+                <h3>Transferencia</h3>
+                
+                <div class="payment-item">
+                    <span class="payment-label">CBU / CVU</span>
+                    <div class="payment-copy-box">
+                        <span>0000003100052492580599</span>
+                        <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('0000003100052492580599')"></i>
+                    </div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">ALIAS</span>
+                    <div class="payment-copy-box">
+                        <span>lootinggame.mp</span>
+                        <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('lootinggame.mp')"></i>
+                    </div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">BANCO</span>
+                    <div class="payment-value-box">Mercado Pago</div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">TIPO</span>
+                    <div class="payment-value-box">Caja de ahorro</div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">TITULAR</span>
+                    <div class="payment-value-box">Betiana Magali Aguirre</div>
+                </div>
+            </div>
+
+            <!-- Columna USD (Dólar) -->
+            <div class="payment-card">
+                <h3>Cripto / PayPal</h3>
+
+                <div class="payment-item">
+                    <span class="payment-label">PAYPAL</span>
+                    <div class="payment-copy-box">
+                        <span>lootgaming26@gmail.com</span>
+                        <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('lootgaming26@gmail.com')"></i>
+                    </div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">Alias USD (Ualá)</span>
+                    <div class="payment-copy-box">
+                        <span>lootinggame.usd</span>
+                        <i class="fa-regular fa-copy" onclick="navigator.clipboard.writeText('lootinggame.usd')"></i>
+                    </div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">CBU USD Ualá</span>
+                    <div class="payment-value-box">3840200500000029955826</div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">TITULAR</span>
+                    <div class="payment-value-box">Betiana Magali Aguirre</div>
+                </div>
+
+                <div class="payment-item">
+                    <span class="payment-label">COTIZACIÓN DOLAR</span>
+                    <div class="payment-value-box">$ 1500</div>
+                </div>
+
+                <div class="payment-footer-note">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>Aceptamos <strong>USD</strong> Pedí la cotización del día al momento de comprar.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Moderno -->
+    <footer class="footer-modern">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo png solo.png" alt="Looting Game Logo">
+            </div>
+            <p class="footer-desc">
+                Entrega rápida por WhatsApp, soporte personalizado, juegos completos y originales. Tu tienda digital de confianza para PS3, PS4 y PS5.
+            </p>
+            <div class="footer-schedule">
+                <i class="fa-regular fa-clock"></i> Vía WhatsApp, de Lunes a Sábados (Horario sujeto a disponibilidad).
+            </div>
+            <div class="footer-socials">
+                <a href="https://wa.me/5491132648737?text=Hola,%20vengo%20de%20la%20web" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/lootinggame/" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Looting Game. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

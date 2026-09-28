@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda - Looting Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Mismos estilos de tarjetas para mantener el diseño */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background-color: #1a1625;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #2d2640;
+            width: 320px;
+            height: 420px;
+        }
+        .product-card img { width: 100%; height: 180px; object-fit: cover; }
+        .product-info { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; background-color: #1a1625; }
+        .category { font-size: 11px; font-weight: bold; color: #b088ff; text-transform: uppercase; margin-bottom: 6px; }
+        .product-info h3 { font-size: 16px; color: #ffffff; margin-bottom: 12px; }
+        .price-box { font-size: 20px; font-weight: bold; color: #ffffff; margin-bottom: 14px; }
+        .btn-whatsapp { background-color: #7b44ff; color: white; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .no-results { color: white; text-align: center; grid-column: 1 / -1; font-size: 18px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header (Igual al de tus otras páginas) -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo-img"></a>
+        </div>
+        <form action="buscar.html" method="GET" class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" name="q" id="searchInput" placeholder="Buscar juegos, gift cards...">
+        </form>
+    </header>
+
+    <main class="container">
+        <h2 id="searchTitle" style="color: white; margin-top: 20px;">Resultados de búsqueda</h2>
+        <div class="products-grid" id="resultadoGrid">
+            <!-- Los productos se cargan dinámicamente aquí -->
+        </div>
+    </main>
+
+    <!-- Cargar la base de datos y la lógica de filtrado -->
+    <script src="productos.js"></script>
+    <script>
+        // 1. Obtener el texto que el usuario escribió en la URL (ej: ?q=alan)
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q') ? urlParams.get('q').toLowerCase().trim() : '';
+
+        const grid = document.getElementById('resultadoGrid');
+        const searchTitle = document.getElementById('searchTitle');
+
+        if (query) {
+            searchTitle.textContent = `Resultados para: "${query}"`;
+
+            // 2. Filtrar productos que coincidan con el texto
+            const resultados = productosGlobales.filter(prod => 
+                prod.nombre.toLowerCase().includes(query) || prod.categoria.toLowerCase().includes(query)
+            );
+
+            // 3. Mostrar los resultados en la página
+            if (resultados.length > 0) {
+                resultados.forEach(prod => {
+                    grid.innerHTML += `
+                        <div class="product-card">
+                            <img src="${prod.imagen}" alt="${prod.nombre}">
+                            <div class="product-info">
+                                <div>
+                                    <span class="category">${prod.categoria}</span>
+                                    <h3>${prod.nombre}</h3>
+                                </div>
+                                <div>
+                                    <div class="price-box"><span>${prod.precio}</span></div>
+                                    <a href="https://wa.me/5491132648737?text=${encodeURIComponent(prod.mensajeWa)}" target="_blank" class="btn-whatsapp">
+                                        <i class="fa-brands fa-whatsapp"></i> Comprar por WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                grid.innerHTML = `<p class="no-results">No se encontraron productos que coincidan con "${query}".</p>`;
+            }
+        } else {
+            searchTitle.textContent = "Por favor, ingresa un término de búsqueda.";
+        }
+    </script>
+</body>
+</html>
